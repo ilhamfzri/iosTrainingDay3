@@ -1,0 +1,6 @@
+framework module Pods_iosTrainingDay3_iosTrainingDay3UITests {
+  umbrella header "Pods-iosTrainingDay3-iosTrainingDay3UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
