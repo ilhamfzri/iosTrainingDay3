@@ -11,7 +11,7 @@ class PersonJobViewCell: UITableViewCell {
 
     @IBOutlet weak var nameValueLabel: UILabel!
     @IBOutlet weak var ageValueLabel: UILabel!
-    @IBOutlet weak var jobValueLabel: UILabel!
+    @IBOutlet weak var salaryValueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,10 +22,10 @@ class PersonJobViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setValue(nameValue:String, ageValue:String, jobValue: String){
+    func setValue(nameValue:String, ageValue:String, salaryValue: String){
         nameValueLabel.text = nameValue
         ageValueLabel.text = ageValue
-        jobValueLabel.text = jobValue
+        salaryValueLabel.text = salaryValue
     }
     
 }

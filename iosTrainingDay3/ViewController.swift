@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         tableView.estimatedRowHeight = 500
         
         var personJobResponseDataList:[PersonJobDataResponseModel] = []
+        
         let response = AF.request("https://dummy.restapiexample.com/api/v1/employees", method: .get).response {
             (data) in
             print("STATUS CODE : " + String(data.response?.statusCode ?? 500))
@@ -60,7 +61,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewCell = tableView.dequeueReusableCell(withIdentifier: tableViewCell, for: indexPath) as! PersonJobViewCell
         
-        viewCell.setValue(nameValue:  personJobEntityList[indexPath.row].name, ageValue: String(personJobEntityList[indexPath.row].age), jobValue:  personJobEntityList[indexPath.row].salary)
+        viewCell.setValue(nameValue:  personJobEntityList[indexPath.row].name, ageValue: String(personJobEntityList[indexPath.row].age), salaryValue:  personJobEntityList[indexPath.row].salary)
         return viewCell
     }
     
